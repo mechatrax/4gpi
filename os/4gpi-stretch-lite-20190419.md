@@ -1,5 +1,5 @@
 # 4gpi-stretch-lite-20190419
-Raspbian Stretch Lite Release 2019-04-08 を元に変更を加えています。
+Raspbian Stretch Lite April 2019 を元に変更を加えています。
 
 ## イメージファイル
 イメージファイルは次のリンクからダウンロードできます。  
