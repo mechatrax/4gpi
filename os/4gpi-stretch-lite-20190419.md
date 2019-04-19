@@ -5,10 +5,13 @@ Raspbian Stretch Lite Release 2019-04-08 を元に変更を加えています。
 イメージファイルは次のリンクからダウンロードできます。  
 [4gpi-stretch-lite-20190419.zip](https://mechatrax.com/data/4gpi/4gpi-stretch-lite-20190419.zip)  
 
-イメージファイルのハッシュは次のとおりです。  
-SHA256: 31f232f938a130544d188c41848e250a24091b006193d30dfcf91060b5b0ed9a  
-SHA1: 4748215a168b0529c2e9da534f3cbc701addeeeb  
-MD5: c48c405ba5575b718eb8012bb2d76074
+イメージファイルのハッシュは次のとおりです。
+
+| アルゴリズム | ハッシュ |
+| :-- | :-- |
+| SHA256 | 31f232f938a130544d188c41848e250a24091b006193d30dfcf91060b5b0ed9a |
+| SHA1 | 4748215a168b0529c2e9da534f3cbc701addeeeb |
+| MD5 | c48c405ba5575b718eb8012bb2d76074 |
 
 ## 変更内容
   * 4GPi 用パッケージをインストール
