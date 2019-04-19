@@ -26,8 +26,6 @@ MD5: 7c195eee0bdc73450289497f33a4adce
   * Raspbian パッケージ  
     jo  
     jq  
-    gpsd  
-    gpsd-clients  
     modemmanager  
     network-manager  
     ntpdate  
