@@ -1,14 +1,17 @@
-# 4gpi-stretch-lite-20181029
-RASPBIAN STRETCH LITE October 2018 を元に変更を加えています。
+# 4gpi-stretch-lite-20190419
+Raspbian Stretch Lite Release 2019-04-08 を元に変更を加えています。
 
 ## イメージファイル
 イメージファイルは次のリンクからダウンロードできます。  
-[4gpi-stretch-lite-20181029.zip](https://mechatrax.com/data/4gpi/4gpi-stretch-lite-20181029.zip)  
+[4gpi-stretch-lite-20190419.zip](https://mechatrax.com/data/4gpi/4gpi-stretch-lite-20190419.zip)  
 
-イメージファイルのハッシュは次のとおりです。  
-SHA256: 9c326e523031162e73dc03bbc9c9793d3a041b3730985e5d26a32f92f51a421f  
-SHA1: ef64151d2943f6565a0746202128f6e8e1a9d732  
-MD5: 7c195eee0bdc73450289497f33a4adce  
+イメージファイルのハッシュは次のとおりです。
+
+| アルゴリズム | ハッシュ |
+| :-- | :-- |
+| SHA256 | 31f232f938a130544d188c41848e250a24091b006193d30dfcf91060b5b0ed9a |
+| SHA1 | 4748215a168b0529c2e9da534f3cbc701addeeeb |
+| MD5 | c48c405ba5575b718eb8012bb2d76074 |
 
 ## 変更内容
   * 4GPi 用パッケージをインストール
@@ -17,10 +20,9 @@ MD5: 7c195eee0bdc73450289497f33a4adce
   * シリアルコンソールを有効化
   * rootfs で ext4 の ⁠metadata_csum と 64bit オプションを有効化
   * ハードウェアウォッチドッグタイマの監視に systemd を使用
-  * ハードウェア乱数生成器の利用に rng-tools を使用
   * systemd-timesyncd の停止
   * APT::Periodic の無効化
-  * Raspbian のパッケージを 20181029 時点の最新版に更新
+  * Raspbian のパッケージを 20190419 時点の最新版に更新
 
 ## インストールパッケージ
   * Raspbian パッケージ  
@@ -29,7 +31,6 @@ MD5: 7c195eee0bdc73450289497f33a4adce
     modemmanager  
     network-manager  
     ntpdate  
-    rng-tools  
     ufw
 
   * 独自パッケージ  
