@@ -24,6 +24,10 @@ https://github.com/mechatrax/ansible-4gpi-playbook
 ## リリースノート
 4GPi 用 microSD カードにインストールされている OS イメージのリリースノートを公開しています。
 
+* ### 4gpi-buster-lite-20190820
+  20190820 の記載があるものは本リリースの OS イメージがインストールされています。  
+  詳細は、[4gpi-buster-lite-20190820.md](./4gpi-buster-lite-20190820.md) を参照してください。
+
 * ### 4gpi-stretch-lite-20190419
   20190419 の記載があるものは本リリースの OS イメージがインストールされています。  
   詳細は、[4gpi-stretch-lite-20190419.md](./4gpi-stretch-lite-20190419.md) を参照してください。
