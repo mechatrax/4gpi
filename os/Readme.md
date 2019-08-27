@@ -14,7 +14,7 @@ OS には Raspbian を採用し、4GPi に必要なツールのセットアッ�
 
 ansible を使用して同等の環境を構築することもできます。  
 詳細はリンク先を参照してください。  
-https://github.com/mechatrax/ansible-4gpi-playbook
+https://github.com/mechatrax/ansible-mechatrax-playbook
 
 ## 初期ログイン情報カード
 4GPi 用 microSD カードに付属している初期ログイン情報カードの .pdf ファイルを公開しています。  
