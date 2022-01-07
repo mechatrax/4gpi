@@ -30,13 +30,3 @@ https://mechatrax.com/data/4gpi/
 
 詳細については次のリンク先を参照してください。  
 [OS イメージ](os)
-
-## 参考資料  
-Raspberry Pi ドキュメント  
-https://www.raspberrypi.org/documentation/  
-
-Raspberry Pi トラブルシューティング  
-https://elinux.org/R-Pi_Troubleshooting  
-
-Raspbian FAQ  
-https://raspbian.org/RaspbianFAQ  
