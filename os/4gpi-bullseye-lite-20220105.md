@@ -3,7 +3,7 @@ Raspberry Pi OS (32-bit) Lite October 30th 2021 を元に変更を加えてい�
 
 ## イメージファイル
 イメージファイルは次のリンクからダウンロードできます。  
-[4gpi-buster-lite-20220105.zip](https://mechatrax.com/data/4gpi/4gpi-bullseye-lite-20220105.zip)  
+[4gpi-bullseye-lite-20220105.zip](https://mechatrax.com/data/4gpi/4gpi-bullseye-lite-20220105.zip)  
 
 イメージファイルの SHA256 ハッシュ値は次のとおりです。
 ```
