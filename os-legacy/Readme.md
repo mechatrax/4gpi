@@ -1,5 +1,5 @@
-# OS イメージ
-ここでは、4GPi 用の SD カードの OS イメージに関する技術資料等を公開しています。
+# OS イメージ（Legacy）
+ここでは、4GPi 用の SD カードの Legacy 版 OS イメージに関する技術資料等を公開しています。
 
 ## 概要
 OS には Raspberry Pi OS (Raspbian) Legacy を採用し、4GPi の動作に必要なツールをセットアップしています。
@@ -22,5 +22,5 @@ https://github.com/mechatrax/ansible-mechatrax-playbook
 [初期ログイン情報カード](../../../raw/master/os-legacy/login.pdf)
 
 ## リリースノート
-4GPi 用 microSD カードにインストールされている OS イメージのリリースノートを公開しています。
+4GPi 用 microSD カードにインストールされている Legacy 版 OS イメージのリリースノートを公開しています。
 
