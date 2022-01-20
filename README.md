@@ -29,4 +29,11 @@ OS のイメージファイルは次のリンク先からダウンロードで�
 https://mechatrax.com/data/4gpi/  
 
 詳細については次のリンク先を参照してください。  
-[OS イメージ](os)
+[OS イメージ](os/Readme.md)
+
+## OS イメージ（Legacy）  
+Legacy 版 OS のイメージファイルは次のリンク先からダウンロードできます。  
+https://mechatrax.com/data/4gpi-legacy/  
+
+詳細については次のリンク先を参照してください。  
+[OS イメージ（Legacy）](os-legacy/Readme.md)
