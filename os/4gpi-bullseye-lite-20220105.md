@@ -43,9 +43,9 @@ Raspberry Pi OS からの変更内容は次のとおりです。
   * 不要なライブラリ等を削除  
     gcc-8-base  
     gcc-9-base  
-    libfribidi0
+    libfribidi0  
     libident  
-    libraspberrypi-doc
+    libraspberrypi-doc  
     libreadline6  
     libsigc++-1.2-5c2  
     rng-tools
