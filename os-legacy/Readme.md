@@ -19,7 +19,7 @@ https://github.com/mechatrax/ansible-mechatrax-playbook
 ## 初期ログイン情報カード
 4GPi 用 microSD カードに付属している初期ログイン情報カードの .pdf ファイルを公開しています。  
 次のリンクから直接ファイルをダウンロードできます。  
-[初期ログイン情報カード](../../../raw/master/os-legacy/login.pdf)
+[初期ログイン情報カード](../../../raw/main/os-legacy/login.pdf)
 
 ## リリースノート
 4GPi 用の Legacy 版 OS イメージのリリースノートを公開しています。
