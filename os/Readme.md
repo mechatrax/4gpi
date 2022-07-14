@@ -19,7 +19,9 @@ https://github.com/mechatrax/ansible-mechatrax-playbook
 ## 初期ログイン情報カード
 4GPi 用 microSD カードに付属している初期ログイン情報カードの .pdf ファイルを公開しています。  
 次のリンクから直接ファイルをダウンロードできます。  
-[初期ログイン情報カード](../../../raw/main/os/login.pdf)
+[初期ログイン情報カード](../../../raw/main/os/login.pdf)  
+4gpi-bullseye-lite-20220711 以降のリリースでは初期ログインユーザーが設定されていません。  
+Raspberry Pi OS と同様の手順でユーザの追加を行って下さい。
 
 ## リリースノート
 4GPi 用 microSD カードにインストールされている OS イメージのリリースノートを公開しています。
