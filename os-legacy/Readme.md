@@ -24,6 +24,10 @@ https://github.com/mechatrax/ansible-mechatrax-playbook
 ## リリースノート
 4GPi 用の Legacy 版 OS イメージのリリースノートを公開しています。
 
+* ### 4gpi-buster-lite-20220721
+  20220721 の記載があるものは本リリースの OS イメージがインストールされています。  
+  詳細は、[4gpi-buster-lite-armhf-20220721.md](./4gpi-buster-lite-armhf-20220721.md) を参照してください。
+
 * ### 4gpi-buster-lite-20220202
   20220202 の記載があるものは本リリースの OS イメージがインストールされています。  
   詳細は、[4gpi-buster-lite-20220202.md](./4gpi-buster-lite-20220202.md) を参照してください。
