@@ -78,10 +78,10 @@ pipeline{
 	}
 	post {
 		success {
-			hangoutsNotify message: "✔ 4GPi の SD イメージ ${RELEASE_NAME} のリリースに成功しました\r\nhttps://twitter.com/mechatracks", token: '${POST_CREDS}', threadByJob: false
+			hangoutsNotify message: "✔ 4GPi の SD イメージ ${RELEASE_NAME} のリリースに成功しました\r\nhttps://twitter.com/mechatracks", token: "${POST_CREDS}", threadByJob: false
 		}
 		failure {
-			hangoutsNotify message: "❌ 4GPi の SD イメージ ${RELEASE_NAME} のリリースに失敗しました", token: '${POST_CREDS}', threadByJob: false
+			hangoutsNotify message: "❌ 4GPi の SD イメージ ${RELEASE_NAME} のリリースに失敗しました", token: "${POST_CREDS}", threadByJob: false
 		}
 	}
 }
