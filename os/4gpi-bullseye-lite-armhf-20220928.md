@@ -25,9 +25,7 @@ Raspberry Pi OS からの変更内容は次のとおりです。
 ## インストールパッケージ
   * Raspbian パッケージ  
     jo  
-    jq  
-    modemmanager  
-    network-manager  
+    jq   
     ufw
 
   * 独自パッケージ  
