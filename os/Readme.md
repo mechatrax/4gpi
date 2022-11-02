@@ -21,7 +21,7 @@ https://github.com/mechatrax/ansible-mechatrax-playbook
 次のリンクから直接ファイルをダウンロードできます。  
 [初期ログイン情報カード](../../../raw/main/os/login.pdf)  
 4gpi-bullseye-lite-20220711 以降のリリースでは初期ログインユーザーが設定されていません。  
-Raspberry Pi OS と同様の手順でユーザの追加を行って下さい。
+Raspberry Pi OS と同様の手順でユーザーの追加を行って下さい。
 
 ## リリースノート
 4GPi 用 microSD カードにインストールされている OS イメージのリリースノートを公開しています。
