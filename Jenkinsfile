@@ -57,7 +57,7 @@ pipeline{
 			}
 			steps {
 				sh 'test -e ${TEMP_DIR}/${RELEASE_NAME}.img.xz && sudo mv ${TEMP_DIR}/${RELEASE_NAME}.img.xz ${TEMP_DIR}/${RELEASE_NAME}.img.xz.orig'
-				sh 'wget -q https://mechatrax.com/data/4gpi${RELEASE_SUFFIX}/${RELEASE_NAME}.img.xz -P /dev/shm'
+				sh 'wget -q https://mechatrax.com/data/4gpi${RELEASE_SUFFIX}/${RELEASE_NAME}.img.xz -P ${TEMP_DIR}'
 				sh 'sha256sum -c ${TEMP_DIR}/${SUM_FILE}'
 				sh 'sudo rm -vf ${TEMP_DIR}/${RELEASE_NAME}.img.xz ${TEMP_DIR}/${RELEASE_NAME}.img.xz.orig ${TEMP_DIR}/${SUM_FILE}'
 				sh 'test -e ${TEMP_DIR} && sudo rm -rf ${TEMP_DIR}'
