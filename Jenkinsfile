@@ -1,6 +1,9 @@
 pipeline{
 	agent any
-
+	environment {
+		TEMP_DIR = '/dev/shm/raspios'
+		POST_CREDS = credentials('c1957e02-a3d9-42e0-9dae-db8ce27974e1')
+	}
 	stages {
 		stage("Checkout GIT") {
 			steps {
@@ -44,7 +47,7 @@ pipeline{
 				usernamePassword(credentialsId: 'aa4ddfcc-11d9-418d-b794-8963612b6a78', passwordVariable: 'FTP_PASSWORD', usernameVariable: 'FTP_USERNAME'),
 				string(credentialsId: '0e3efab3-616e-439d-806b-55aac4cd84fd', variable: 'FTP_IP')
 				]) {
-					sh 'curl -sS -T /dev/shm/${RELEASE_NAME}.img.xz -u ${FTP_USERNAME}:${FTP_PASSWORD} ftp://${FTP_IP}/data/4gpi${RELEASE_SUFFIX}/'
+					sh 'curl -sS -T ${TEMP_DIR}/${RELEASE_NAME}.img.xz -u ${FTP_USERNAME}:${FTP_PASSWORD} ftp://${FTP_IP}/data/4gpi${RELEASE_SUFFIX}/'
 				}
 			}
 		}
@@ -53,10 +56,11 @@ pipeline{
 				expression { return RELEASE_NAME != 'none' }
 			}
 			steps {
-				sh 'test -e /dev/shm/${RELEASE_NAME}.img.xz && sudo mv /dev/shm/${RELEASE_NAME}.img.xz /dev/shm/${RELEASE_NAME}.img.xz.orig'
+				sh 'test -e ${TEMP_DIR}/${RELEASE_NAME}.img.xz && sudo mv ${TEMP_DIR}/${RELEASE_NAME}.img.xz ${TEMP_DIR}/${RELEASE_NAME}.img.xz.orig'
 				sh 'wget -q https://mechatrax.com/data/4gpi${RELEASE_SUFFIX}/${RELEASE_NAME}.img.xz -P /dev/shm'
-				sh 'sha256sum -c /dev/shm/${SUM_FILE}'
-				sh 'sudo rm -vf /dev/shm/${RELEASE_NAME}.img.xz /dev/shm/${RELEASE_NAME}.img.xz.orig /dev/shm/${SUM_FILE}'
+				sh 'sha256sum -c ${TEMP_DIR}/${SUM_FILE}'
+				sh 'sudo rm -vf ${TEMP_DIR}/${RELEASE_NAME}.img.xz ${TEMP_DIR}/${RELEASE_NAME}.img.xz.orig ${TEMP_DIR}/${SUM_FILE}'
+				sh 'test -e ${TEMP_DIR} && sudo rm -rf ${TEMP_DIR}'
 			}
 		}
 		stage("Tweet") {
@@ -72,9 +76,6 @@ pipeline{
 				}
 			}
 		}
-	}
-	environment{
-		POST_CREDS = credentials('c1957e02-a3d9-42e0-9dae-db8ce27974e1')
 	}
 	post {
 		success {
