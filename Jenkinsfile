@@ -60,7 +60,7 @@ pipeline{
 				sh 'wget -q https://mechatrax.com/data/4gpi${RELEASE_SUFFIX}/${RELEASE_NAME}.img.xz -P ${TEMP_DIR}'
 				sh 'sha256sum -c ${TEMP_DIR}/${SUM_FILE}'
 				sh 'sudo rm -vf ${TEMP_DIR}/${RELEASE_NAME}.img.xz ${TEMP_DIR}/${RELEASE_NAME}.img.xz.orig ${TEMP_DIR}/${SUM_FILE}'
-				sh 'test -e ${TEMP_DIR} && sudo rm -rf ${TEMP_DIR}'
+				sh 'test -e ${TEMP_DIR} && sudo rm -rf ${TEMP_DIR}/*'
 			}
 		}
 		stage("Tweet") {
@@ -74,6 +74,14 @@ pipeline{
 				]) {
 					sh 'python3 -c "from twython import Twython; Twython(\\"${API}\\",\\"${APISECRET}\\",\\"${ACCESS}\\",\\"${ACCESSSECRET}\\").update_status(status=\\"${TWEET_MESSAGE}\\")"'
 				}
+			}
+		}
+		stage("Next build trigger") {
+			when {
+				expression { return RELEASE_SUFFIX != '-legacy' }
+			}
+			steps {
+				build job: "PifieldSDImageBuilder", wait: false
 			}
 		}
 	}
