@@ -26,6 +26,10 @@ Raspberry Pi OS と同様の手順でユーザーの追加を行って下さい�
 ## リリースノート
 4GPi 用 microSD カードにインストールされている OS イメージのリリースノートを公開しています。
 
+* ### 4gpi-bullseye-lite-armhf-20230329
+  20230329 の記載があるものは本リリースの OS イメージがインストールされています。  
+  詳細は、[4gpi-bullseye-lite-armhf-20230329.md](./4gpi-bullseye-lite-armhf-20230329.md) を参照してください。
+
 * ### 4gpi-bullseye-lite-armhf-20221122
   20221122 の記載があるものは本リリースの OS イメージがインストールされています。  
   詳細は、[4gpi-bullseye-lite-armhf-20221122.md](./4gpi-bullseye-lite-armhf-20221122.md) を参照してください。
