@@ -1,8 +1,12 @@
+#!/usr/bin/env groovy
+@Library('jenkins-custom-library')_
 pipeline{
 	agent any
 	environment {
 		TEMP_DIR = '/dev/shm/raspios'
-		POST_CREDS = credentials('c1957e02-a3d9-42e0-9dae-db8ce27974e1')
+
+		ZULIP_PROPS = readProperties file: "${WORKSPACE}/properties/zulip_prop"
+		MAIN_STREAM = "${ZULIP_PROPS['MAIN_STREAM']}"
 	}
 	stages {
 		stage("Checkout GIT") {
@@ -31,7 +35,7 @@ pipeline{
 						} else {
 							env.RELEASE_SUFFIX = ''
 							env.RELEASE_MODIFIER = ''
-							env.SUM_FILE = '4gpi_lite_armhf.sha256sum'
+							env.SUM_FILE = '4gpi_lite_arm64.sha256sum'
 						}
 						env.TWEET_MESSAGE = "弊社ラズベリーパイ用 4G（LTE）通信モジュール 4GPi（フォージーパイ）の${RELEASE_MODIFIER} OS イメージ ${RELEASE_NAME} をリリースしました。\\nhttps://github.com/mechatrax/4gpi/blob/master/os${RELEASE_SUFFIX}/${RELEASE_NAME}.md"
 					}
@@ -60,7 +64,7 @@ pipeline{
 				sh 'wget -q https://mechatrax.com/data/4gpi${RELEASE_SUFFIX}/${RELEASE_NAME}.img.xz -P ${TEMP_DIR}'
 				sh 'sha256sum -c ${TEMP_DIR}/${SUM_FILE}'
 				sh 'sudo rm -vf ${TEMP_DIR}/${RELEASE_NAME}.img.xz ${TEMP_DIR}/${RELEASE_NAME}.img.xz.orig ${TEMP_DIR}/${SUM_FILE}'
-				sh 'test -e ${TEMP_DIR} && sudo rm -rf ${TEMP_DIR}'
+				sh 'test -e ${TEMP_DIR} && sudo rm -rf ${TEMP_DIR}/*'
 			}
 		}
 		stage("Tweet") {
@@ -69,20 +73,21 @@ pipeline{
 			}
 			steps {
 				withCredentials([
+					usernamePassword(credentialsId: 'c4c404b1-66c8-4dac-8c52-fdf8c4b8b700', passwordVariable: 'NAME', usernameVariable: 'BEARER'),
 					usernamePassword(credentialsId: '5862efc0-4e22-4447-9ac4-af71c72f7fea', passwordVariable: 'APISECRET', usernameVariable: 'API'),
 					usernamePassword(credentialsId: '555f6776-fbe8-4833-b8dd-cf9e4838a7d6', passwordVariable: 'ACCESSSECRET', usernameVariable: 'ACCESS')
 				]) {
-					sh 'python3 -c "from twython import Twython; Twython(\\"${API}\\",\\"${APISECRET}\\",\\"${ACCESS}\\",\\"${ACCESSSECRET}\\").update_status(status=\\"${TWEET_MESSAGE}\\")"'
+					sh 'python3 -c "import tweepy; tweepy.Client(bearer_token=\\"${BEARER}\\", consumer_key=\\"${API}\\",consumer_secret=\\"${APISECRET}\\",access_token=\\"${ACCESS}\\",access_token_secret=\\"${ACCESSSECRET}\\").create_tweet(text=\\"${TWEET_MESSAGE}\\")"'
 				}
 			}
 		}
 	}
 	post {
 		success {
-			hangoutsNotify message: "✔ 4GPi の SD イメージ ${RELEASE_NAME} のリリースに成功しました\r\nhttps://twitter.com/mechatracks", token: "${POST_CREDS}", threadByJob: false
+			zulipSend message: "✔ 4GPi の SD イメージ ${RELEASE_NAME} のリリースに成功しました\r\nhttps://twitter.com/mechatracks", stream: "${MAIN_STREAM}"
 		}
 		failure {
-			hangoutsNotify message: "❌ 4GPi の SD イメージ ${RELEASE_NAME} のリリースに失敗しました", token: "${POST_CREDS}", threadByJob: false
+			zulipSend message: "❌ 4GPi の SD イメージ ${RELEASE_NAME} のリリースに失敗しました", stream: "${MAIN_STREAM}"
 		}
 	}
 }
