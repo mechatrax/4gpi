@@ -37,7 +37,7 @@ pipeline{
 							env.RELEASE_MODIFIER = ''
 							env.SUM_FILE = '4gpi_lite_arm64.sha256sum'
 						}
-						env.TWEET_MESSAGE = "弊社ラズベリーパイ用 4G（LTE）通信モジュール 4GPi（フォージーパイ）の${RELEASE_MODIFIER} OS イメージ ${RELEASE_NAME} をリリースしました。\\nhttps://github.com/mechatrax/4gpi/blob/master/os${RELEASE_SUFFIX}/${RELEASE_NAME}.md"
+						env.TWEET_MESSAGE = "弊社ラズベリーパイ用 4G（LTE）通信モジュール 4GPi（フォージーパイ）の${RELEASE_MODIFIER} OS イメージ ${RELEASE_NAME} をリリースしました。\\nhttps://github.com/mechatrax/4gpi/blob/main/os${RELEASE_SUFFIX}/${RELEASE_NAME}.md"
 					}
 				}
 			}
