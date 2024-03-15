@@ -26,6 +26,10 @@ Raspberry Pi OS と同様の手順でユーザーの追加を行って下さい�
 ## リリースノート
 4GPi 用 microSD カードにインストールされている OS イメージのリリースノートを公開しています。
 
+* ### 4gpi-bookworm-lite-arm64-20240315
+  20240315 の記載があるものは本リリースの OS イメージがインストールされています。  
+  詳細は、[4gpi-bookworm-lite-arm64-20240315.md](./4gpi-bookworm-lite-arm64-20240315.md) を参照してください。
+
 * ### 4gpi-bookworm-lite-arm64-20240208
   20240208 の記載があるものは本リリースの OS イメージがインストールされています。  
   詳細は、[4gpi-bookworm-lite-arm64-20240208.md](./4gpi-bookworm-lite-arm64-20240208.md) を参照してください。
