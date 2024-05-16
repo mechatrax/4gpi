@@ -17,10 +17,20 @@
     1.3 [パッケージのインストール](../../wiki/ソフトウェア#13-パッケージのインストール)  
   2. [パッケージ](../../wiki/ソフトウェア#2-パッケージ)  
   3. [インターフェース](../../wiki/ソフトウェア#3-インターフェース)  
-### [OS イメージ](../../wiki/OSイメージ)  
-  + [OS イメージ](../../wiki/RaspberryPiOS)  
-  + [OS イメージ（Legacy）](../../wiki/RaspberryPiOS（Legacy）)  
 ### [その他](../../wiki/その他)  
   + [動作確認済み SIM](../../wiki/その他#動作確認済み-sim)  
   + [接続設定](../../wiki/その他#接続設定)  
 
+## OS イメージ  
+OS のイメージファイルは次のリンク先からダウンロードできます。  
+https://mechatrax.com/data/4gpi/  
+
+詳細については次のリンク先を参照してください。  
+[OS イメージ](os/Readme.md)
+
+## OS イメージ（Legacy）  
+Legacy 版 OS のイメージファイルは次のリンク先からダウンロードできます。  
+https://mechatrax.com/data/4gpi-legacy/  
+
+詳細については次のリンク先を参照してください。  
+[OS イメージ（Legacy）](os-legacy/Readme.md)
