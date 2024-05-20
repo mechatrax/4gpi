@@ -4,7 +4,7 @@ pipeline{
 	agent any
 	environment {
 		JENKINS_CREDENTIALS = credentials('5b25baba-433c-41a9-b104-59e49ec74e49')
-		FTP_CREDENTIALS = credentials('aa5ddfcc-11d9-418d-b794-8963612b6a78')
+		FTP_CREDENTIALS = credentials('aa4ddfcc-11d9-418d-b794-8963612b6a78')
 		FTP_IP_CREDENTIALS = credentials('0e3efab3-616e-439d-806b-55aac4cd84fd')
 
 		TEMP_DIR = '/dev/shm/raspios'
