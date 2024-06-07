@@ -1,6 +1,10 @@
 ## リリースノート
 4GPi 用の Legacy 版 OS イメージのリリースノートを公開しています。
 
+* ### 4gpi-bullseye-lite-armhf-20240607
+  20240607 の記載があるものは本リリースの OS イメージがインストールされています。  
+  詳細は、[4gpi-bullseye-lite-armhf-20240607.md](./4gpi-bullseye-lite-armhf-20240607.md) を参照してください。
+
 * ### 4gpi-buster-lite-armhf-20230512
   20230512 の記載があるものは本リリースの OS イメージがインストールされています。  
   詳細は、[4gpi-buster-lite-armhf-20230512.md](./4gpi-buster-lite-armhf-20230512.md) を参照してください。
