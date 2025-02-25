@@ -3,7 +3,7 @@ Raspberry Pi OS (32-bit) Lite (Legacy) July 4th 2024 を元に変更を加えて
 
 ## イメージファイル
 イメージファイルは次のリンクからダウンロードできます。  
-[4gpi-bullseye-lite-armhf-20240716.img.xz](https://mechatrax.com/data/4gpi/4gpi-bullseye-lite-armhf-20240716.img.xz)  
+[4gpi-bullseye-lite-armhf-20240716.img.xz](https://mechatrax.com/data/4gpi-legacy/4gpi-bullseye-lite-armhf-20240716.img.xz)  
 
 イメージファイルの SHA256 ハッシュ値は次のとおりです。
 ```
