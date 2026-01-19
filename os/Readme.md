@@ -1,6 +1,10 @@
 ## リリースノート
 4GPi 用 microSD カードにインストールされている OS イメージのリリースノートを公開しています。
 
+* ### 4gpi-trixie-lite-arm64-20260119
+  20260119 の記載があるものは本リリースの OS イメージがインストールされています。  
+  詳細は、[4gpi-trixie-lite-arm64-20260119.md](./4gpi-trixie-lite-arm64-20260119.md) を参照してください。
+
 * ### 4gpi-bookworm-lite-arm64-20250515
   20250515 の記載があるものは本リリースの OS イメージがインストールされています。  
   詳細は、[4gpi-bookworm-lite-arm64-20250515.md](./4gpi-bookworm-lite-arm64-20250515.md) を参照してください。
