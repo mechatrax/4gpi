@@ -54,5 +54,4 @@
 ### [互換性情報](../../wiki/互換性情報)
 
 - Raspberry Pi 5
-  - [4GPi ver.2](../../wiki/4GPi-ver.2-Raspberry-Pi-5)
   - [4GPi](../../wiki/4GPi-Raspberry-Pi-5)
