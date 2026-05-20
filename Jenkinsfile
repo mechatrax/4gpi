@@ -77,20 +77,6 @@ pipeline{
 				sh 'test -e ${TEMP_DIR} && sudo rm -rf ${TEMP_DIR}/*'
 			}
 		}
-		stage("Tweet") {
-			when {
-				expression { return RELEASE_NAME != 'none' }
-			}
-			steps {
-				withCredentials([
-					usernamePassword(credentialsId: 'c4c404b1-66c8-4dac-8c52-fdf8c4b8b700', passwordVariable: 'NAME', usernameVariable: 'BEARER'),
-					usernamePassword(credentialsId: '5862efc0-4e22-4447-9ac4-af71c72f7fea', passwordVariable: 'APISECRET', usernameVariable: 'API'),
-					usernamePassword(credentialsId: '555f6776-fbe8-4833-b8dd-cf9e4838a7d6', passwordVariable: 'ACCESSSECRET', usernameVariable: 'ACCESS')
-				]) {
-					sh 'python3 -c "import tweepy; tweepy.Client(bearer_token=\\"${BEARER}\\", consumer_key=\\"${API}\\",consumer_secret=\\"${APISECRET}\\",access_token=\\"${ACCESS}\\",access_token_secret=\\"${ACCESSSECRET}\\").create_tweet(text=\\"${TWEET_MESSAGE}\\")"'
-				}
-			}
-		}
 	}
 	post {
 		success {
